@@ -33,13 +33,13 @@ public class TelegramBot extends TelegramLongPollingBot {
 
             switch (messageText){
                 case "/start":
-                    sendMessage(chatId, "Taken command: " + messageText);
+                    sendMessage(chatId, "You can use /help and /info commands");
                     break;
                 case "/help":
-                    sendMessage(chatId, "Taken command: " + messageText);
+                    sendMessage(chatId, "Use command /info to find out chat id");
                     break;
                 case "/info":
-                    sendMessage(chatId, "Taken command: " + messageText);
+                    sendMessage(chatId, "Your chat id = " + chatId + ". With it you can use REST");
                     break;
                 default:
                     sendMessage(chatId, messageText + " is not a command");
@@ -47,7 +47,7 @@ public class TelegramBot extends TelegramLongPollingBot {
         }
     }
 
-    private synchronized void sendMessage(Long chatId, String textToSend){
+    private void sendMessage(Long chatId, String textToSend){
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(String.valueOf(chatId));
         sendMessage.setText(textToSend);
