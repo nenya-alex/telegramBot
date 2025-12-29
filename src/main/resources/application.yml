@@ -1,0 +1,11 @@
+server.port: 8787
+spring.application.name: telegramBot
+
+#https://anycript.com/crypto/jasypt
+bot:
+  name: Alex77GoalsTestBot
+  token: ENC(BL5FCEsH3jZ0YA88vyfaEp6cqKk0crz2kPjpSH6UKIrQR30qkL7EeHfqR5hVa/whMMWvaLsG1+U=)
+jasypt:
+  encryptor:
+    iv-generator-classname: org.jasypt.iv.NoIvGenerator
+    algorithm: PBEWithMD5AndDES
