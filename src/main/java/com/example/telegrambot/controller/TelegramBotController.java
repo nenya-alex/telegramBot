@@ -1,5 +1,6 @@
-package com.example.telegrambot.bot;
+package com.example.telegrambot.controller;
 
+import com.example.telegrambot.bot.TelegramBot;
 import com.example.telegrambot.dto.BotRequest;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;

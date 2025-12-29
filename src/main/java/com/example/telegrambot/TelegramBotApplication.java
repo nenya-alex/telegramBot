@@ -1,5 +1,6 @@
 package com.example.telegrambot;
 
+import com.example.telegrambot.bot.TelegramBot;
 import com.ulisesbocchio.jasyptspringboot.annotation.EnableEncryptableProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
@@ -13,8 +14,9 @@ import org.springframework.core.env.Environment;
 @Slf4j
 public class TelegramBotApplication {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 		Environment env = SpringApplication.run(TelegramBotApplication.class, args).getEnvironment();
+
 
 		String serverPort = env.getProperty("server.port");
 		log.info("\n ----------------------------------------------------------\n\t" +
