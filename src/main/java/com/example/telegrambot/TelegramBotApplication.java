@@ -1,15 +1,12 @@
 package com.example.telegrambot;
 
-import com.example.telegrambot.bot.TelegramBot;
 import com.ulisesbocchio.jasyptspringboot.annotation.EnableEncryptableProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 
-@Configuration
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.example.telegrambot", "org.telegram.telegrambots.starter"})
 @EnableEncryptableProperties
 @Slf4j
 public class TelegramBotApplication {
